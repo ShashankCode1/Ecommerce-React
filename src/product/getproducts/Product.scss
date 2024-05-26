@@ -1,0 +1,23 @@
+.product-container {
+  display: flex;
+  gap: 30px;
+  border: 1px solid white;
+  box-shadow: 0 0 4px 1px silver;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.prod-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.prod-name {
+  font-size: x-large;
+}
+
+.prod-desc {
+  font-size: large;
+}

@@ -1,0 +1,28 @@
+.details-container {
+  display: flex;
+  gap: 25px;
+}
+
+.prod-detail-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.prod-detail-name {
+  font-size: xx-large;
+}
+
+.prod-details {
+  font-size: large;
+}
+
+.conditional-msg {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.back-icon {
+  width: 45px;
+  height: 45px;
+}

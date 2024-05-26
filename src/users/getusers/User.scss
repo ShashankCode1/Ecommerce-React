@@ -1,0 +1,35 @@
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 0 10px;
+  border: 1px solid white;
+  box-shadow: 0 0 4px 1px silver;
+  border-radius: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.link-text {
+  text-decoration: none;
+  color: black;
+}
+
+.user-name,
+.user-email {
+  font-weight: bold;
+}
+
+.user-name {
+  color: #DC4C64;
+}
+
+.user-email {
+  color: #54b4d3;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e9ebed;
+}

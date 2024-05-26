@@ -1,0 +1,63 @@
+.user-details-name {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.user-details {
+  font-size: large;
+}
+
+.add-address-card {
+  width: 400px;
+}
+
+.user-details-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-address-container {
+  width: 400px;
+  height: 230px;
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 1px silver;
+  padding: 10px;
+  background-color: white;
+}
+
+.address-container {
+  width: 400px;
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 1px silver;
+  padding: 10px;
+  background-color: white;
+}
+
+.address-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.address-labels {
+  font-weight: bold;
+}
+
+.eachAddress-card {
+  width: 300px;
+  border: 1px solid rgb(223, 217, 217);
+  border-radius: 10px;
+}
+
+.address-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
+}
+
+.add-address-header {
+  display: flex;
+  justify-content: space-between;
+}
+

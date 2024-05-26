@@ -1,0 +1,28 @@
+.box {
+  width: 230px;
+  height: 230px;
+  border: 1px solid white;
+  box-shadow: 0 0 4px 1px rgb(233, 230, 230);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box-title {
+  font-size: 40px;
+}
+
+.box-count {
+  font-size: x-large;
+}
+
+.box-containers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.cart-btn {
+  text-align: right;
+}

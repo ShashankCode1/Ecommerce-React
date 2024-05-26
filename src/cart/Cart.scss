@@ -1,0 +1,35 @@
+.cartItem-card {
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 1px silver;
+  padding: 0 10px 0 10px;
+  width: 180px;
+  text-align: center;
+}
+
+.cartItem-name {
+  font-weight: bold;
+}
+
+.quantity-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-btn {
+  border: 1px solid silver;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.cartItems-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.total-price {
+  font-size: large;
+}
