@@ -3,3 +3,9 @@
   gap: 40px;
   grid-template-columns: repeat(2, 1fr);
 }
+
+.navigation-btns {
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+}

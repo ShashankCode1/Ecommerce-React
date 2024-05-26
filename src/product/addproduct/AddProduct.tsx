@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Product } from "../../types/Product";
 import axios from "axios";
 import "./AddProduct.scss";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import backIcon from "../../assets/arrow-left-solid.svg";
 
 const AddProduct: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -80,60 +81,69 @@ const AddProduct: React.FC = () => {
   };
 
   return (
-    <div className="add-container">
-      <p className="heading centered">Add Product</p>
-      <form onSubmit={handleSubmit}>
-        <div className="input-layout mb-2">
-          <label>Name:</label>
-          <input
-            type="text"
-            name="prodName"
-            placeholder="enter product name"
-            onChange={handleChange}
-            className="input-field"
-          />
-        </div>
-        <div className="input-layout mb-2">
-          <label>Category:</label>
-          <input
-            type="text"
-            name="category"
-            placeholder="enter category"
-            onChange={handleChange}
-            className="input-field"
-          />
-        </div>
-        <div className="input-layout mb-2">
-          <label>Description:</label>
-          <input
-            type="text"
-            name="description"
-            placeholder="enter description"
-            onChange={handleChange}
-            className="input-field"
-          />
-        </div>
-        <div className="input-layout mb-2">
-          <label>Price:</label>
-          <input
-            type="number"
-            name="price"
-            placeholder="enter price"
-            onChange={handlePrice}
-            className="input-field"
-          />
-        </div>
-        <div className="input-layout mb-2">
-          <label>Image:</label>
-          <input type="file" name="imageURL" onChange={handleImage} />
-        </div>
-        <div className="centered">
-          <button className="btn btn-success">
-            {isLoading ? "Adding" : "Add Product"}
-          </button>
-        </div>
-        <p className="centered error-text mt-2">{error}</p>
-      </form>
+    <div>
+      <div>
+        <Link to={"/products"}>
+          <div>
+            <img src={backIcon} className="btn btn-primary back-icon mb-3" />
+          </div>
+        </Link>
+      </div>
+      <div className="add-container">
+        <p className="heading centered">Add Product</p>
+        <form onSubmit={handleSubmit}>
+          <div className="input-layout mb-2">
+            <label>Name:</label>
+            <input
+              type="text"
+              name="prodName"
+              placeholder="enter product name"
+              onChange={handleChange}
+              className="input-field"
+            />
+          </div>
+          <div className="input-layout mb-2">
+            <label>Category:</label>
+            <input
+              type="text"
+              name="category"
+              placeholder="enter category"
+              onChange={handleChange}
+              className="input-field"
+            />
+          </div>
+          <div className="input-layout mb-2">
+            <label>Description:</label>
+            <input
+              type="text"
+              name="description"
+              placeholder="enter description"
+              onChange={handleChange}
+              className="input-field"
+            />
+          </div>
+          <div className="input-layout mb-2">
+            <label>Price:</label>
+            <input
+              type="number"
+              name="price"
+              placeholder="enter price"
+              onChange={handlePrice}
+              className="input-field"
+            />
+          </div>
+          <div className="input-layout mb-2">
+            <label>Image:</label>
+            <input type="file" name="imageURL" onChange={handleImage} />
+          </div>
+          <div className="centered">
+            <button className="btn btn-success">
+              {isLoading ? "Adding" : "Add Product"}
+            </button>
+          </div>
+          <p className="centered error-text mt-2">{error}</p>
+        </form>
+      </div>
     </div>
   );
 };

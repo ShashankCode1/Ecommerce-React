@@ -36,20 +36,44 @@ const GetProducts: React.FC<{
 
   return (
     <div>
-      <Link to={"/cart"}>
-        <div className="cart-btn mb-4">
-          <button className="btn btn-primary">Go to Cart</button>
-        </div>
-      </Link>
-      <div className="products-layout">
-        {products.map((eachProduct) => (
-          <Product
-            key={eachProduct.prodId}
-            product={eachProduct}
-            showDetails={showDetails}
-            addToCart={addToCart}
-          />
-        ))}
+      <div>
+        {products.length === 0 ? (
+          <div>
+            <p className="conditional-msg">No products available</p>
+            <p className="conditional-msg">
+              *Add Product from{" "}
+              <Link to={"/addproduct"}>
+                <span className="btn btn-primary">here</span>
+              </Link>
+            </p>
+          </div>
+        ) : (
+          <div>
+            <div className="navigation-btns">
+              <Link to={"/addproduct"}>
+                <div className="cart-btn mb-4">
+                  <button className="btn btn-danger">Add Product</button>
+                </div>
+              </Link>
+              <Link to={"/cart"}>
+                <div className="cart-btn mb-4">
+                  <button className="btn btn-primary">Go to Cart</button>
+                </div>
+              </Link>
+            </div>
+
+            <div className="products-layout">
+              {products.map((eachProduct) => (
+                <Product
+                  key={eachProduct.prodId}
+                  product={eachProduct}
+                  showDetails={showDetails}
+                  addToCart={addToCart}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

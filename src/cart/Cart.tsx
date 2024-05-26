@@ -8,6 +8,7 @@ import {
   User as UserInterface,
 } from "../types/User";
 import { Order as OrderInterface, ShippingInfo } from "../types/Order";
+import { useHistory } from "react-router-dom";
 
 interface CartProps {
   cartItems: CartInterface[];
@@ -146,6 +147,8 @@ const Cart: React.FC<CartProps> = ({
     0
   );
 
+  const history = useHistory();
+
   const handlePlaceOrder = async () => {
     if (totalCartPrice > 0) {
       setIsLoading(true);
@@ -160,6 +163,7 @@ const Cart: React.FC<CartProps> = ({
         clearCart();
         setUserId("");
         setAddressId("");
+        history.push("/orders");
       } catch (error) {
         setError((error as Error).message);
       } finally {

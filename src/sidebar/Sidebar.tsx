@@ -28,20 +28,6 @@ const Sidebar: React.FC = () => {
             <p className="sidebar-text">Users</p>
           </div>
         </Link>
-
-        <hr />
-
-        <Link to={"/addproduct"} className="sidebar-links">
-          <div>
-            <p className="sidebar-text">Add Product</p>
-          </div>
-        </Link>
-
-        <Link to={"/adduser"} className="sidebar-links">
-          <div>
-            <p className="sidebar-text">Add User</p>
-          </div>
-        </Link>
       </div>
     </div>
   );

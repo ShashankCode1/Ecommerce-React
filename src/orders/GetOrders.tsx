@@ -36,35 +36,41 @@ const GetOrders: React.FC<{
 
   return (
     <div>
-      <Table hover striped bordered>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Order Id</th>
-            <th>Total Price</th>
-            <th>Quantity</th>
-            <th>City</th>
-            <th>More</th>
-          </tr>
-        </thead>
+      {orders.length === 0 ? (
+        <p className="conditional-msg">*No orders history available</p>
+      ) : (
+        <div>
+          <Table hover striped bordered>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Order Id</th>
+                <th>Total Price</th>
+                <th>Quantity</th>
+                <th>City</th>
+                <th>More</th>
+              </tr>
+            </thead>
 
-        <tbody>
-          {orders.map((eachOrder) => (
-            <tr key={eachOrder.orderId}>
-              <td>{eachOrder.shippingInfo.userName}</td>
-              <td>{eachOrder.orderId}</td>
-              <td>₹ {eachOrder.totalCartPrice}</td>
-              <td>{eachOrder.totalCartQuantity}</td>
-              <td>{eachOrder.shippingInfo.shippingAddress.city}</td>
-              <td onClick={() => displayOrderDetails(eachOrder)}>
-                <Link to={"/orderdetails"} className="link-text">
-                  ...
-                </Link>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
+            <tbody>
+              {orders.map((eachOrder) => (
+                <tr key={eachOrder.orderId}>
+                  <td>{eachOrder.shippingInfo.userName}</td>
+                  <td>{eachOrder.orderId}</td>
+                  <td>₹ {eachOrder.totalCartPrice}</td>
+                  <td>{eachOrder.totalCartQuantity}</td>
+                  <td>{eachOrder.shippingInfo.shippingAddress.city}</td>
+                  <td onClick={() => displayOrderDetails(eachOrder)}>
+                    <Link to={"/orderdetails"} className="link-text">
+                      ...
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        </div>
+      )}
     </div>
   );
 };

@@ -21,7 +21,7 @@
   height: 230px;
   border: 1px solid white;
   border-radius: 10px;
-  box-shadow: 0 0 4px 1px silver;
+  box-shadow: 0 0 2px 1px silver;
   padding: 10px;
   background-color: white;
 }
@@ -30,7 +30,7 @@
   width: 400px;
   border: 1px solid white;
   border-radius: 10px;
-  box-shadow: 0 0 4px 1px silver;
+  // box-shadow: 0 0 2px 1px silver;
   padding: 10px;
   background-color: white;
 }
@@ -46,7 +46,8 @@
 
 .eachAddress-card {
   width: 300px;
-  border: 1px solid rgb(223, 217, 217);
+  border: 1px solid white;
+  box-shadow: 0 0 2px 1px silver;
   border-radius: 10px;
 }
 
